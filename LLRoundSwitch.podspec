@@ -14,8 +14,6 @@ Pod::Spec.new do |s|
 
   s.source_files = 'LLRoundSwitch/*.{h,m}'
 
-  s.clean_path = 'LLRoundSwitchDemo'
-
   s.frameworks = 'QuartzCore', 'UIKit', 'Foundation', 'CoreGraphics'
 
   s.requires_arc = true
