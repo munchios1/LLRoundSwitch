@@ -37,7 +37,7 @@ CGGradientRef GradientCreateWithColors(CGColorSpaceRef colorSpace, CGColorRef st
     // when we actually create the gratient. There are several ways to fix this, but we'll use the most straight-forward: CGColorRetain/Release
     
     // For more info on this bug, see http://weblog.bignerdranch.com/296-arc-gotcha-unexpectedly-short-lifetimes
-    CGColorRef knobStartColor = CGColorRetain([UIColor colorWithWhite:0.82 alpha:1.0].CGColor);
+    CGColorRef knobStartColor = CGColorRetain([UIColor colorWithWhite:0.996 alpha:1.0].CGColor);
 	CGColorRef knobEndColor = CGColorRetain((self.gripped) ? 
                                             [UIColor colorWithWhite:0.894 alpha:1.0].CGColor : 
                                             [UIColor colorWithWhite:0.996 alpha:1.0].CGColor);

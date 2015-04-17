@@ -55,7 +55,7 @@
     }
     
     // off tint color (white)
-    CGContextSetFillColorWithColor(context, [UIColor colorWithWhite:0.963 alpha:1.0].CGColor);
+    CGContextSetFillColorWithColor(context, [UIColor colorWithWhite:0.4 alpha:1.0].CGColor);
     CGContextFillRect(context, CGRectMake(knobCenter, 0, self.bounds.size.width - knobCenter, self.bounds.size.height));
     
     // knob shadow
@@ -75,21 +75,21 @@
     CGSize onTextSize = [self.onString sizeWithFont:font];
     CGPoint onTextPoint = CGPointMake((textSpaceWidth - onTextSize.width) / 2.0 + knobRadius * .15, 
                                       floorf((self.bounds.size.height - onTextSize.height) / 2.0) + 1.0);
-    [[UIColor colorWithWhite:0.45 alpha:1.0] set]; // .2 & .4
-    [self.onString drawAtPoint:CGPointMake(onTextPoint.x, onTextPoint.y - 1.0)
+    [[UIColor colorWithWhite:1 alpha:1.0] set]; // .2 & .4
+    [self.onString drawAtPoint:CGPointMake(onTextPoint.x, onTextPoint.y)
                       withFont:font];
-    [[UIColor whiteColor] set];
-    [self.onString drawAtPoint:onTextPoint
-                      withFont:font];
+//    [[UIColor whiteColor] set];
+//    [self.onString drawAtPoint:onTextPoint
+//                      withFont:font];
     
     // off state label (self.offstring)
     CGSize offTextSize = [self.offString sizeWithFont:font];
 	CGPoint offTextPoint = CGPointMake(textSpaceWidth + (textSpaceWidth - offTextSize.width) / 2.0 + knobRadius * .86, 
                                        floorf((self.bounds.size.height - offTextSize.height) / 2.0) + 1.0);
 	[[UIColor whiteColor] set];
-	[self.offString drawAtPoint:CGPointMake(offTextPoint.x, offTextPoint.y + 1.0) 
+	[self.offString drawAtPoint:CGPointMake(offTextPoint.x, offTextPoint.y)
                        withFont:font];
-	[[UIColor colorWithWhite:0.52 alpha:1.0] set];
+	[[UIColor colorWithWhite:1 alpha:1.0] set];
 	[self.offString drawAtPoint:offTextPoint 
                        withFont:font];
     
